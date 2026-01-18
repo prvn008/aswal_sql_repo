@@ -15,7 +15,7 @@ Focus:
 
 | Difficulty | Count | Solved |
 |------------|-------|--------|
-| Easy       | 4   | 100%   |
+| Easy       | 7   | 100%   |
 | Medium     | 2   | 100%   |
 
 
