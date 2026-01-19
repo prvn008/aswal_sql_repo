@@ -1,0 +1,18 @@
+...............................................................................................................................................................................
+question ✅ daily_active_users.sql
+
+-- Title: Daily Active Users (DAU) - Last 30 Days
+-- Description: This query calculates the number of unique users who were active each day within a 30-day period ending on 2019-07-27.
+-- Notes:
+-- 1. Any activity type ('open_session', 'end_session', 'scroll_down', 'send_message') is considered.
+-- 2. Users with multiple activities on the same day are counted only once.
+-- 3. Days without activity are automatically excluded.
+...............................................................................................................................................................................
+✅ Solution
+SELECT
+    activity_date AS day,
+    COUNT(DISTINCT user_id) AS active_users
+FROM activity
+WHERE activity_date BETWEEN DATE '2019-06-28' AND DATE '2019-07-27'
+GROUP BY activity_date
+ORDER BY activity_date;
